@@ -1,0 +1,29 @@
+<br>
+<mat-card-content>
+  <mat-form-field class="url-field" color="primary">
+    <input disabled matInput placeholder="Your Youtube URL:" [value]="youtubeUrl">
+  </mat-form-field>
+  <br>
+</mat-card-content>
+<mat-card-actions>
+  <mat-spinner *ngIf="isLoading" color="accent"></mat-spinner>
+  <mat-menu #appMenu="matMenu">
+    <a mat-menu-item *ngFor="let youtubeVideo of youtubeResponse" href="{{ youtubeVideo.url }}" download="{{ youtubeVideo.title }}">{{ youtubeVideo.format }}</a>
+  </mat-menu>
+  <button *ngIf="isYoutubeResponseReady()" mat-raised-button [matMenuTriggerFor]="appMenu" color="primary">
+    <mat-icon>file_download</mat-icon>
+    <span>Download</span>
+  </button>
+  <button *ngIf="isYoutubeResponseReady()" mat-raised-button color="accent" (click)="downloadAnother()">
+    <mat-icon>arrow_back</mat-icon>
+    <span>Download Another Video</span>
+  </button>
+  <button *ngIf="hasError" mat-raised-button color="warn" (click)="retryDownload()">
+    <mat-icon>redo</mat-icon>
+    <span>Retry</span>
+  </button>
+  <button *ngIf="hasError" mat-raised-button color="accent" routerLink="/">
+    <mat-icon>arrow_back</mat-icon>
+    <span>Back</span>
+  </button>
+</mat-card-actions>

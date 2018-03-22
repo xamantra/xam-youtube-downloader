@@ -1,0 +1,15 @@
+<br>
+<mat-card-content>
+  <form class="url-form" (submit)="redirect()">
+    <mat-form-field class="url-field" color="primary">
+      <input type="url" matInput placeholder="Youtube URL here." [(ngModel)]="youtubeUrl" [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+  </form>
+  <br>
+</mat-card-content>
+<mat-card-content>
+  <button (click)="redirect()" mat-raised-button color="accent" id="start-button">
+    <span>Start</span>
+    <mat-icon>arrow_forward</mat-icon>
+  </button>
+</mat-card-content>

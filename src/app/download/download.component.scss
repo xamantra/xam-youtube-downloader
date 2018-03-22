@@ -1,0 +1,19 @@
+mat-card-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-card-actions > .mat-button {
+    margin-bottom: 16px;
+}
+
+.url-field {
+  width: 98%;
+}
+
+mat-card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

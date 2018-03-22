@@ -1,0 +1,53 @@
+mat-card-actions > .mat-button:first-child, mat-card-actions > .mat-raised-button:first-child {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+mat-card-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-card-actions > .mat-button {
+    margin-bottom: 16px;
+}
+
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-card {
+    margin: 0 auto;
+    vertical-align: middle;
+}
+
+.url-form {
+  min-width: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mat-card>.mat-card-actions:last-child {
+    padding-bottom: 8px;
+}
+
+.url-field {
+  width: 98%;
+}
+
+#start-button span {
+  margin-right: 5px;
+}

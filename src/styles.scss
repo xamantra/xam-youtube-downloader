@@ -1,1 +1,78 @@
 /* You can add global styles to this file, and also import other style files */
+//@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+//@import "theme.scss";
+
+html, body {
+    height: 98%;
+    overflow: auto;
+}
+
+body {
+    background-color: #EAEAEA;
+    background-image: url("assets/images/16.jpg");
+    background-position: center center;
+    background-repeat:  no-repeat;
+	background-attachment: fixed;
+	background-size:  cover;
+	background-color: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 0px) {
+
+}
+
+@media only screen and (max-width: 360px) {
+    
+}
+
+@media only screen and (max-width: 400px) {
+    
+}
+
+@media only screen and (max-width: 480px) {
+    
+}
+
+@media only screen and (max-width: 600px) {
+    
+}
+
+@media only screen and (max-width: 720px) {
+    
+}
+
+@media only screen and (max-height: 720px) {
+
+}
+
+@media only screen and (max-width: 840px) {
+    
+}
+
+@media only screen and (max-width: 960px) {
+    
+}
+
+@media only screen and (max-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 1280px) {
+
+}
+
+@media only screen and (max-width: 1440px) {
+
+}
+
+@media only screen and (max-width: 1600px) {
+    
+}
+
+@media only screen and (max-width: 1920px) {
+    
+}
