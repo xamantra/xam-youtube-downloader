@@ -55,7 +55,7 @@ npm install
 ```
 4. You need to replace this code in 'youtube-response.service.ts' with the appropriate api link that you have setup.
 > ![](images/code.png)
-> The app will not work properly if you didn't setup the php api correctly!
+The app will not work properly if you didn't setup the php api correctly!
 
 ## Serving the angular app.
 
