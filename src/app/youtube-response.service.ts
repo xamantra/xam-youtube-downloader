@@ -8,7 +8,9 @@ import 'rxjs/add/observable/throw';
 @Injectable()
 export class YoutubeResponseService {
 
-  private url = 'https://xamantra.000webhostapp.com/ytd-api/?xam_url=';
+  private url = 'https://example.com/xam-youtube-downloader-api/?xam_url=';
+  // or
+  // private url = 'https://localhost/xam-youtube-downloader-api/?xam_url=';
 
   constructor(private httpClient: HttpClient) { }
 
