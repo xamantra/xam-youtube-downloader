@@ -3,12 +3,10 @@
         <mat-toolbar-row>
             <span>YouTube Video Downloader</span>
             <span class="example-spacer"></span>
-            <button mat-button color="accent">
-                <mat-icon>code</mat-icon>
-                GitHub</button>
-            <button mat-button color="accent">
-                <mat-icon>content_copy</mat-icon>
-                Clone</button>
+            <button mat-button color="accent" (click)="openHelp()">
+                <mat-icon>help</mat-icon>
+                <span>Help</span>
+            </button>
         </mat-toolbar-row>
     </mat-toolbar>
     <br>

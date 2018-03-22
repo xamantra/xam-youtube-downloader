@@ -12,13 +12,15 @@ import { FormComponent } from './form/form.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DownloadComponent } from './download/download.component';
+import { HelpComponent } from './help/help.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
-    DownloadComponent
+    DownloadComponent,
+    HelpComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +46,9 @@ import { DownloadComponent } from './download/download.component';
     HttpClientModule
   ],
   providers: [YoutubeResponseService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    HelpComponent
+  ]
 })
 export class AppModule { }

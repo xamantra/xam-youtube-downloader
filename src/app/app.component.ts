@@ -1,3 +1,5 @@
+import { HelpComponent } from './help/help.component';
+import { MatDialogModule, MatDialog, MatDialogConfig } from '@angular/material/';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+
+  constructor(private dialog: MatDialog) { }
+
+  openHelp() {
+    const dialogConfig = new MatDialogConfig;
+    dialogConfig.disableClose = true;
+    this.dialog.open(HelpComponent, dialogConfig);
+  }
 }
