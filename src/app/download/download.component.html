@@ -8,7 +8,7 @@
 <mat-card-actions>
   <mat-spinner *ngIf="isLoading" color="accent"></mat-spinner>
   <mat-menu #appMenu="matMenu">
-    <a mat-menu-item *ngFor="let youtubeVideo of youtubeResponse" href="{{ youtubeVideo.url }}" download="{{ youtubeVideo.title }}">{{ youtubeVideo.format }}</a>
+    <a mat-menu-item *ngFor="let youtubeVideo of youtubeResponse" href="{{ youtubeVideo.url }}" download="{{ youtubeVideo.url }}">{{ youtubeVideo.format }}</a>
   </mat-menu>
   <button *ngIf="isYoutubeResponseReady()" mat-raised-button [matMenuTriggerFor]="appMenu" color="primary">
     <mat-icon>file_download</mat-icon>

@@ -13,7 +13,7 @@ export class AppComponent {
 
   openHelp() {
     const dialogConfig = new MatDialogConfig;
-    dialogConfig.disableClose = true;
+    dialogConfig.disableClose = false;
     this.dialog.open(HelpComponent, dialogConfig);
   }
 }
