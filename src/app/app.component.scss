@@ -5,3 +5,16 @@
 .spacer {
   flex: 1 1 auto;
 }
+
+.container {
+  height: 100%;
+}
+
+.navbar .navbar-nav .nav-item.active .nav-link, .navbar .navbar-nav .nav-item.active .nav-link:hover, .navbar .navbar-nav .nav-item.active .nav-link:focus {
+  color: #3C4858;
+  background: #E0E6ED;
+}
+
+.header-filter::before {
+  background: rgba(0, 0, 0, 0.2);
+}

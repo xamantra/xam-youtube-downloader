@@ -1,19 +1,14 @@
-mat-card-actions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-mat-card-actions > .mat-button {
-    margin-bottom: 16px;
-}
-
 .url-field {
-  width: 98%;
+  width: 96%;
+  text-overflow: ellipsis;
 }
 
 mat-card-content {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.btn .material-icons, .btn:not(.btn-just-icon):not(.btn-fab) .fa {
+  font-size: 24px;
 }

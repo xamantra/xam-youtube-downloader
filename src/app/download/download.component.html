@@ -1,29 +1,52 @@
-<br>
-<mat-card-content>
-  <mat-form-field class="url-field" color="primary">
-    <input disabled matInput placeholder="Your Youtube URL:" [value]="youtubeUrl">
-  </mat-form-field>
-  <br>
-</mat-card-content>
-<mat-card-actions>
-  <mat-spinner *ngIf="isLoading" color="accent"></mat-spinner>
-  <mat-menu #appMenu="matMenu">
-    <a mat-menu-item *ngFor="let youtubeVideo of youtubeResponse" href="{{ youtubeVideo.url }}" download="{{ youtubeVideo.url }}">{{ youtubeVideo.format }}</a>
-  </mat-menu>
-  <button *ngIf="isYoutubeResponseReady()" mat-raised-button [matMenuTriggerFor]="appMenu" color="primary">
-    <mat-icon>file_download</mat-icon>
-    <span>Download</span>
-  </button>
-  <button *ngIf="isYoutubeResponseReady()" mat-raised-button color="accent" (click)="downloadAnother()">
-    <mat-icon>arrow_back</mat-icon>
-    <span>Download Another Video</span>
-  </button>
-  <button *ngIf="hasError" mat-raised-button color="warn" (click)="retryDownload()">
-    <mat-icon>redo</mat-icon>
-    <span>Retry</span>
-  </button>
-  <button *ngIf="hasError" mat-raised-button color="accent" routerLink="/">
-    <mat-icon>arrow_back</mat-icon>
-    <span>Back</span>
-  </button>
-</mat-card-actions>
+<div class="row">
+  <mat-progress-bar *ngIf="isLoading" color="accent" mode="indeterminate" style="margin-top: -14.6px"></mat-progress-bar>
+  <div class="col-xl-12" *ngIf="isLoading">
+    <div class="row">
+      <div class="col-xl-12 form-group bmd-form-group">
+        <input disabled placeholder="Your Youtube URL:" [value]="youtubeUrl" class="form-control">
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-6" *ngIf="!isLoading">
+    <div class="row">
+      <div class="col-xl-12 form-group bmd-form-group">
+        <input disabled placeholder="Your Youtube URL:" [value]="youtubeUrl" class="form-control">
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-6" *ngIf="isYoutubeResponseReady()">
+    <div class="row">
+      <div class="col-xl-6">
+        <button class="btn btn-danger dropdown-toggle btn-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <mat-icon>file_download</mat-icon>
+          <span>Download</span>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a *ngFor="let youtubeVideo of youtubeResponse" class="dropdown-item" href="{{ youtubeVideo.url }}" download>{{ youtubeVideo.format }}</a>
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <button (click)="downloadAnother()" type="button " class="btn btn-primary btn-block">
+          <mat-icon>arrow_back</mat-icon>
+          <span>Back</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-6" *ngIf="hasError">
+    <div class="row">
+      <div class="col-xl-6">
+        <button type="button" class="btn btn-primary btn-block" (click)="retryDownload()">
+          <i class="material-icons">redo</i>
+          <span>Retry</span>
+        </button>
+      </div>
+      <div class="col-xl-6">
+        <button type="button" class="btn btn-primary btn-block" routerLink="/">
+          <i class="material-icons">arrow_back</i>
+          <span>Back</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

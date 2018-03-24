@@ -1,0 +1,44 @@
+<h1 id="xam---youtube-video-downloader">XAM - Youtube Video Downloader</h1>
+<p>A simpe and lightweight YouTube video downloader built with Angular and PHP. &gt; Try it <a href="https://xamantra.github.io/xam-youtube-downloader">HERE</a></p>
+<div class="figure">
+<img src="images/preview.png" />
+</div>
+<h2 id="clone-the-repository">Clone the Repository</h2>
+<p>Clone this repository</p>
+<pre><code>git clone https://github.com/xamantra/xam-youtube-downloader.git</code></pre>
+<h3 id="prerequisites">Prerequisites</h3>
+<ol style="list-style-type: decimal">
+<li><p><a href="https://nodejs.org/en/">nodejs</a> and <a href="https://www.npmjs.com">npm</a> &gt; nodejs already includes npm.</p></li>
+<li><p>Angular CLI &gt; install via npm</p>
+<pre><code>npm install @angular/cli</code></pre></li>
+<li><p><a href="https://github.com/xamantra/xam-youtube-downloader-api">xam-youtube-downloader-api</a>. This is written in PHP.</p></li>
+</ol>
+<h3 id="setup-the-php-api">Setup the PHP api</h3>
+<p>You need to host this api by using a webserver. &gt; You can use WAMP for Windows, LAMP for Linux, or MAMP for macOS. But I recommend using XAMPP for all platforms or you can also host it directly to a web hosting site. Clone this api:</p>
+<pre><code>git clone https://github.com/xamantra/xam-youtube-downloader-api.git</code></pre>
+<blockquote>
+<p>You can try the DEMO for this api by:</p>
+</blockquote>
+<pre><code>https://xamantra.000webhostapp.com/ytd-api/?xam_url=YOUTUBE_VIDEO_URL_HERE</code></pre>
+<blockquote>
+<p>Sample : <a href="https://xamantra.000webhostapp.com/ytd-api/?xam_url=https://www.youtube.com/watch?v=w3jLJU7DT5E">https://xamantra.000webhostapp.com/ytd-api/?xam_url=https://www.youtube.com/watch?v=w3jLJU7DT5E</a></p>
+</blockquote>
+<p><a href="https://github.com/xamantra/xam-youtube-downloader-api/blob/master/README.md">Read</a> this for more info.</p>
+<h3 id="setup-the-angular-app">Setup the Angular app</h3>
+<p>Once you setup your xam-youtube-downloader-api on a server, your can now setup the xam-youtube-downloader angular project.</p>
+<ol style="list-style-type: decimal">
+<li>Open your terminal or any command line tools.</li>
+<li><p>Go to xam-youtube-downloader folder.</p>
+<pre><code>cd xam-youtube-downloader</code></pre></li>
+<li><p>Run npm install to install all the dependencies.</p>
+<pre><code>npm install</code></pre></li>
+<li><p>You need to replace this code in 'youtube-response.service.ts' with the appropriate api link that you have setup. &gt; <img src="images/code.png" /></p></li>
+</ol>
+<p>The app will not work properly if you didn't setup the php api correctly!</p>
+<h2 id="serving-the-angular-app.">Serving the angular app.</h2>
+<ol style="list-style-type: decimal">
+<li><p>Run ng serve to start the app in your browser.</p>
+<pre><code>ng serve --open</code></pre></li>
+</ol>
+<p>The app is now ready for your own modifications.</p>
+<h3 id="happy-coding">Happy Coding!</h3>
