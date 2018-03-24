@@ -1,0 +1,25 @@
+.force-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.row > div {
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.row .form-control {
+  height: 41px;
+}
+
+.card-header {
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.10) !important;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12) !important
+}
+
+.title,.card-title,.info-title,.footer-brand,.footer-big h5,.footer-big h4,.media .media-heading {
+    font-weight: 300;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+}
